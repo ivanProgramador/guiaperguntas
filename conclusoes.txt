@@ -1,2 +1,20 @@
 Framework EJS 
- serve para desenhar o html 
+   serve para desenhar o html, se comporta como um template engine que aceita renderização condicional,
+   tanto de variaveis simples quanto de arrays. para a exibição de uma variavel tem que usar  a sintaxe 
+   <%= minha_variavel %>
+
+   para executar uma expressao
+
+   <% if(variavel){%>
+
+     <p>se for true eu apareço</p>
+
+   <%}else{%>
+
+     <p> se for false eu apareço </p>
+
+   <%}%>
+
+   Lembra bastante o php 
+      
+ 
