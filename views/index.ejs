@@ -11,6 +11,26 @@
     <h1>Guia perguntas</h1>
     <hr>
     <h3>Lista</h3>
+    <h3>
+        <!--Mostrando as variaveis que vieramm do backend-->
+      <p>Nome:       <%= nome %>     </p>
+      <p>Linguagem:  <%= lang %>     </p>
+      <p>Empresa:    <%= empresa %>  </p>
+      <p>Inscritos:  <%= inscritos %></p>
+        <!--renderização condicional -->
+        <!--No EJS quando se trata de expressões e não de variavel o simbolo '='
+            não é usado o exemploi abaixo mostra uma exibição condicionakl com base
+            no valor da variavel msg
+        -->
+
+      <% if(msg==true){ %>
+         <p>A mesagem é verdadeira</p>
+      <%}else{%>
+          <p>A mensagem é falsa</p>
+      <%}%>
+    
+
+    </h3>
     
 </body>
 </html>
