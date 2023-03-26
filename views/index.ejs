@@ -28,6 +28,16 @@
       <%}else{%>
           <p>A mensagem é falsa</p>
       <%}%>
+
+      <!--usando o foreach pra mostrar os pordutos que tewm dentro do array de produtos-->
+
+      <% produtos.forEach(function(produto){%>
+         <hr>
+      <h4><%= produto.nome%></h4>
+      <h5><%= produto.preço%></h5>
+
+
+      <%})%>
     
 
     </h3>

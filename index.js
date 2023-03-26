@@ -13,6 +13,16 @@ app.get('/:nome/:lang',function(req,res){
 
     var nome =req.params.nome;
     var lang = req.params.lang;
+    var mostraMsg = false;
+    //passando um array de objetos
+    var produtos = [
+        {nome: 'Doritos', preço:3.14},
+        {nome: 'Coca-cola', preço:5.00},
+        {nome: 'leite', preço:1.45}
+    ]
+
+
+
 
      //neste caso para renderizar o index.ejs não é necessarios colocar o caminho 
     //porque o render ja espéra que exista a pasta views e busca dentro dela qualçquer aruivo com o nome index
@@ -24,7 +34,8 @@ app.get('/:nome/:lang',function(req,res){
         lang:lang,
         empresa:"Udemy",
         inscritos: 8000,
-        msg: true
+        msg: mostraMsg,
+        produtos: produtos
     });
     
 });
