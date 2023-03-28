@@ -4,43 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--não precisa referenciar a pasta public no caminho do css porque o ejs ja sabe que ela existe-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
     <title>Guia perguntas</title>
 </head>
 <body>
 
-    <h1>Guia perguntas</h1>
-    <hr>
-    <h3>Lista</h3>
-    <h3>
-        <!--Mostrando as variaveis que vieramm do backend-->
-      <p>Nome:       <%= nome %>     </p>
-      <p>Linguagem:  <%= lang %>     </p>
-      <p>Empresa:    <%= empresa %>  </p>
-      <p>Inscritos:  <%= inscritos %></p>
-        <!--renderização condicional -->
-        <!--No EJS quando se trata de expressões e não de variavel o simbolo '='
-            não é usado o exemploi abaixo mostra uma exibição condicionakl com base
-            no valor da variavel msg
-        -->
-
-      <% if(msg==true){ %>
-         <p>A mesagem é verdadeira</p>
-      <%}else{%>
-          <p>A mensagem é falsa</p>
-      <%}%>
-
-      <!--usando o foreach pra mostrar os pordutos que tewm dentro do array de produtos-->
-
-      <% produtos.forEach(function(produto){%>
-         <hr>
-      <h4><%= produto.nome%></h4>
-      <h5><%= produto.preço%></h5>
 
 
-      <%})%>
-    
+    <h1>teste</h1>
 
-    </h3>
+
     
 </body>
+
+<!--Quabndo instalar bootstrap sempre manter essa ordem
+    1 link do jquery
+    2 link do popper
+    3 link do bootstrap.min.js
+-->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
 </html>
