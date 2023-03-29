@@ -41,12 +41,20 @@ CODIGO HTML REUTILIZAVEL COM PARTIALS
   assim eu posso padronizar o layout
 
   -----------------------------------------------------------------------
+pegando dados vindos de um formulario
+
+1 - instalar a biblioteca body-parser 
+2 - importar o body-parser no index.js 
+
+o body-parser é o reponsavel por traduzir os dados que vem do formulario em uma estrtura js 
+que pode ser usada pelo node, por isso antes de ser usado de fato ele precisa ser ligado ao express 
+ 
 
 
 
 
 
-  
+
 
 
 

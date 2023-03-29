@@ -1,5 +1,12 @@
 const express = require("express");
 const app = express();
+const bodyParser = require('body-parser');
+
+//ligando o express no body parser 
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+
 //usando o ejs 
 app.set('view engine', 'ejs');
 
@@ -28,7 +35,10 @@ app.get('/perguntar',(req,res)=>{
 });
 
 app.post('/salvarpergunta', (req,res)=>{
-    res.send("Formulario recebido");
+    //pegando as informações dos formulario
+    var titulo = req.body.titulo;
+    var descricao = req.body.descricao;
+    res.send("Formulario recebido titulo: "+ titulo +"descricao: " + descricao);
 });
 
 
