@@ -27,5 +27,9 @@ app.get('/perguntar',(req,res)=>{
    
 });
 
+app.post('/salvarpergunta', (req,res)=>{
+    res.send("Formulario recebido");
+});
+
 
 app.listen(8080,()=>{console.log("app rodando !")});
