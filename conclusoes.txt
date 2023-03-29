@@ -48,8 +48,34 @@ pegando dados vindos de um formulario
 
 o body-parser é o reponsavel por traduzir os dados que vem do formulario em uma estrtura js 
 que pode ser usada pelo node, por isso antes de ser usado de fato ele precisa ser ligado ao express 
+
+app.use(bodyParser.urlencoded({extended:false}));
+---------------------------------------------------------------------
+sequelize 
+  É um orm que permite a mani pulação da base de dados usando o  javascript como linguagem de manipulação
+usdando a biblioteca sequelize e possivel se conectar a varios bancos como mysql, sql server, postgree ....
+
+o comando de instlaçao é:
+npm install --save sequelize
+
+tem outra biblioteca pra a dicionar  
+npm install --save mysql2
+
+-----------------------------------------------------------------------------
+iniciando a conexão 
+ nesse projeto eu criri uma pasta que vai guaradar somente as coisas relacionadas a banco de dados
+ e a pasta database, mais detalhes sobre a conexãop esta no arquivo database.js dentro dela 
+
+ -----------------------------------------------------------------------
  
 
+
+
+
+
+
+  
+ 
 
 
 
