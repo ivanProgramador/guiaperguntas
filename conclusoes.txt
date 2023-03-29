@@ -16,5 +16,43 @@ Framework EJS
    <%}%>
 
    Lembra bastante o php 
+
+
+----------------------------------------------------------------------
+CODIGO HTML REUTILIZAVEL COM PARTIALS
+
+  Em algumas aplicações existe a necessidade de padronizar a interface gráfica,
+  durante o processo de desenvolvimento não é uma boa pratica ficar copindo e colando html 
+  para clonar elementos em uma pagina, o jewito mais rapido de se fazer isso é usando partials
+  no porcesso a interface e divida em partes no caso deste projeto os elementos são:
+  header,nav e footer que vão ser padrão nas paginas.
+
+  o unico elemento original da pagina fica sendo o body para que possa incluir os partials
+  basiacamente eu faço como se fosse uma variavel na sequencia abaixo: 
+  
+  <%- include('partials/header.ejs') %>
+
+  <body>
+     conteudo original da pagina 
+  </body>
+
+  <%- include('partials/footer.ejs') %>
+
+  assim eu posso padronizar o layout
+
+  -----------------------------------------------------------------------
+
+
+
+
+
+  
+
+
+
+
+
+
+
       
  

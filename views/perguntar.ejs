@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--não precisa referenciar a pasta public no caminho do css porque o ejs ja sabe que ela existe-->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-     <link rel="stylesheet" href="/css/styles.css">
-
-    <title>Guia perguntas</title>
-</head>
+<%- include('partials/header.ejs') %>
 <body>
-
-  <div class="navbar navbar-light bg-primary">
-    <img class="navbar-brand" src="/img/guia.png">
-
-  </div>
-    
+  <%- include('partials/navbar.ejs') %>
   <div class="container">
-
     <div class="card" id="formulario-pergunta">
       <div class="card-header">
-        <h3>Fazer uma pergunta</h3>
+              <h3>Fazer uma pergunta</h3>
       </div>
-
       <div class="card-body">
-
             <form>
-          
               <label>titulo</label>
               <br>
               <input type="text" placeholder="digite o titulo da pergunta" class="form-control">
@@ -37,23 +17,8 @@
               <br>
               <button class="form-control btn btn-primary col-md-2">Perguntar</button>
           </form>
-
       </div>
-
     </div>     
-
   </div>
-
-    
 </body>
-
-<!--Quabndo instalar bootstrap sempre manter essa ordem
-    1 link do jquery
-    2 link do popper
-    3 link do bootstrap.min.js
--->
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js"></script>
-</html>
+<%- include('partials/footer.ejs') %>
