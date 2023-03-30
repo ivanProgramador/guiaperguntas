@@ -3,6 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
 
+//so o fato de immportar pra esse arquivo ao salvar ele ja executa a função sync
+//que cria a tabela 
+const perguntaModel = require('./database/Pergunta');
+
 //tentanbdo conectar 
 
 connection
