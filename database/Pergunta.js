@@ -25,5 +25,9 @@ const Pergunta = connection.define('peguntas',{
 
 Pergunta.sync({force:false}).then(()=>{});
 
+module.exports = Pergunta;
+
+
+
 
 

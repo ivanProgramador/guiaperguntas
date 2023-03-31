@@ -5,7 +5,7 @@ const connection = require('./database/database');
 
 //so o fato de immportar pra esse arquivo ao salvar ele ja executa a função sync
 //que cria a tabela 
-const perguntaModel = require('./database/Pergunta');
+const pergunta = require('./database/Pergunta');
 
 //tentanbdo conectar 
 
@@ -44,17 +44,36 @@ app.get('/',function(req,res){
 });
 
 
+
 app.get('/perguntar',(req,res)=>{
 
    res.render('perguntar');
    
 });
 
+
+
 app.post('/salvarpergunta', (req,res)=>{
+
+
     //pegando as informações dos formulario
     var titulo = req.body.titulo;
     var descricao = req.body.descricao;
-    res.send("Formulario recebido titulo: "+ titulo +"descricao: " + descricao);
+
+    //inserinddo os dados no banco 
+    
+    pergunta.create({
+
+      titulo: titulo,
+      descricao: descricao
+      
+    }).then(()=>{
+
+       res.redirect('/');
+
+    })
+
+
 });
 
 
