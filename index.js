@@ -41,8 +41,15 @@ app.get('/',function(req,res){
     //essa função equivale a um select
     //a ordem raw significa cru significa que ele vai trazer somente os dados e nada mais 
     //sem o raw ativo ele vai trazer varias outras informações desnecessarias sobre o registro
+    //para colocar em oredem os dados que eu quero trazer 
+    //
 
-    Pergunta.findAll({raw:true}).then(perguntas=>{
+    Pergunta.findAll({raw:true,
+      //Aqui eu digo para o order que eu quero ordenar pelo id e quero a orden decrescente
+      //como o order é um array eu to passando esses parametros por indices    
+      // DESC = descrescente  e ASC = crescente 
+      order:[['id','DESC']]
+     }).then(perguntas=>{
 
       res.render('index',{
          perguntas:perguntas
