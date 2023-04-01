@@ -5,7 +5,7 @@ const connection = require('./database/database');
 
 //so o fato de immportar pra esse arquivo ao salvar ele ja executa a função sync
 //que cria a tabela 
-const pergunta = require('./database/Pergunta');
+const Pergunta = require('./database/Pergunta');
 
 //tentanbdo conectar 
 
@@ -38,8 +38,19 @@ app.use(express.static('public'));
 
 app.get('/',function(req,res){
    
+    //essa função equivale a um select
+    //a ordem raw significa cru significa que ele vai trazer somente os dados e nada mais 
+    //sem o raw ativo ele vai trazer varias outras informações desnecessarias sobre o registro
+
+    Pergunta.findAll({raw:true}).then(perguntas=>{
+
+      res.render('index',{
+         perguntas:perguntas
+      });
+      
+    });
+
     
-    res.render('index');
     
 });
 
@@ -62,7 +73,7 @@ app.post('/salvarpergunta', (req,res)=>{
 
     //inserinddo os dados no banco 
     
-    pergunta.create({
+    Pergunta.create({
 
       titulo: titulo,
       descricao: descricao
