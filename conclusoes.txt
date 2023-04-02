@@ -63,10 +63,22 @@ npm install --save mysql2
 
 -----------------------------------------------------------------------------
 iniciando a conexão 
- nesse projeto eu criri uma pasta que vai guaradar somente as coisas relacionadas a banco de dados
+ nesse projeto eu criri uma pasta que vai guardar somente as coisas relacionadas a banco de dados
  e a pasta database, mais detalhes sobre a conexãop esta no arquivo database.js dentro dela 
 
  -----------------------------------------------------------------------
+
+O projeto foi finalizado com sucesso neste porjeto eu aprendi a criar uma plataforma de perguntas e respostas
+similar a um site onde as pessoas postam as perguntas e elas podem ser reposndidas por pessoas anonimas 
+isso me ajudos a entender como uma api age usando um sistema de rotas e conexão com a base de dados.
+
+aprendi a usar Frameworks como: 
+ - EJS 
+ - express
+ - sequelize
+ - nodemon
+
+
  
 
 
